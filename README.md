@@ -40,10 +40,10 @@ The initial evaluation of the models showed challenges in predicting the minorit
 
 ## Phase 1: Identifying the Challenge of Class Imbalance
 
-In the first phase, we recognized a common hurdle in machine learning: class imbalance. Our dataset exhibited a significant disproportion, with an overwhelming majority of instances in one class. This led to our models excelling at predicting the majority class while struggling with the minority class, as evidenced by the low precision and recall for the latter.
+In the first phase, I recognized a common hurdle in machine learning: class imbalance. Our dataset exhibited a significant disproportion, with an overwhelming majority of instances in one class. This led to our models excelling at predicting the majority class while struggling with the minority class, as evidenced by the low precision and recall for the latter.
 
 ### Addressing Imbalance
-To counteract this imbalance, we explored several strategies:
+To counteract this imbalance, i explored several strategies:
 - **Resampling Techniques**: Balancing the dataset by either oversampling the minority class or undersampling the majority class.
 - **Weighted Classes**: Adjusting the models to give higher importance to the minority class.
 - **Synthetic Data Generation**: Utilizing SMOTE for generating synthetic samples of the minority class.
@@ -64,14 +64,14 @@ The results after tuning the GBoost Classifier:
 | **Weighted Avg**  | 0.99    | 0.91   | 0.95    | 2239    |
 
 
-Upon refining the Gradient Boosting Classifier, we observed a substantial improvement in recall for the minority class. However, this gain in recall came with a reduction in precision for the same class and a slight drop in overall accuracy.
+Upon refining the Gradient Boosting Classifier, I observed a substantial improvement in recall for the minority class. However, this gain in recall came with a reduction in precision for the same class and a slight drop in overall accuracy.
 
 ### Insights
 - **Trade-off Between Precision and Recall**: An increased ability to identify the best-performing stocks was offset by a higher rate of false positives.
 - **Macro Average F1-Score**: Despite these adjustments, the overall balance between precision and recall, as measured by the macro average F1-score, showed little improvement.
 
 ### Moving Forward
-We proposed several steps for further enhancement:
+I proposed several steps for further enhancement:
 - **Threshold Adjustment**: Fine-tuning the model's decision threshold.
 - **Feature Engineering and Selection**: Re-evaluating and enhancing the features used for training.
 - **Model Complexity**: Experimenting with more complex configurations of the Gradient Boosting model.
@@ -103,7 +103,7 @@ Adjustments to decision thresholds revealed interesting shifts:
 
 ## Enhancing the LSTM Model
 
-We then shifted our focus to the LSTM model, aiming for a more advanced and robust architecture.
+I then shifted our focus to the LSTM model, aiming for a more advanced and robust architecture.
 ## LSTM Model Performance
 
 The performance evaluation of the LSTM model is as follows:
