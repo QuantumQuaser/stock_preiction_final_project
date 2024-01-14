@@ -265,7 +265,7 @@ Adjusting the LSTM model with class weights led to remarkable changes:
 *Accuracy: 0.7963376507369362*
 
 
-In our final phase, we experimented with various thresholds for the LSTM model, seeking an optimal balance:
+In final phase, we experimented with various thresholds for the LSTM model, seeking an optimal balance:
 
 - **Threshold Variations**: Testing at 0.4, 0.5, and 0.6 showed different impacts on precision and recall.
 - **Precision-Recall Trade-Off**: Highlighting the ongoing challenge of balancing these two metrics.
