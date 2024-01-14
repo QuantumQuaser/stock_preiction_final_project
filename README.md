@@ -1,5 +1,76 @@
 # Model Development Journey: Stock Prediction Challenge
 
+
+# Stock Prediction Model Development Summary
+
+## Objective Definition
+- **Goal**: Predict the best performing stock out of a given set for the next week.
+- **Factors Considered**: 
+  - Risk-to-reward ratio
+  - Expected weekly profits
+  - Technical indicators such as RSI, MACD, Bollinger Bands, and Fibonacci Retracements.
+
+## Data Collection
+- **Source**: Historical stock data from Yahoo Finance for selected stocks.
+- **Features**: Daily prices, volumes, and technical indicators.
+
+## Data Preprocessing
+- **Cleaning**: 
+  - Handling missing values
+  - Removing duplicates
+  - Ensuring data consistency
+- **Feature Engineering**: 
+  - Calculating technical indicators
+  - Integrating sentiment analysis and Nifty trend data
+
+## Model Selection and Initial Training
+- **Models Used**: 
+  - Gradient Boosting
+  - Random Forest
+  - LSTM
+- **Initial Training**: Models were trained using the processed features.
+
+## Addressing Class Imbalance
+- **Problem Identified**: Poor performance on the minority class due to class imbalance.
+- **Solutions Implemented**:
+  - SMOTE for oversampling
+  - Adjusted class weights
+  - Explored different metrics for evaluation
+
+## Model Refinement
+- **Enhanced LSTM**: 
+  - Improved architecture with more layers and neurons
+- **Hyperparameter Tuning**: 
+  - Adjusted model parameters for better performance
+- **Threshold Tuning**: 
+  - Experimented with different decision thresholds for classification
+
+## Model Evaluation and Iteration
+- **Ongoing Evaluation**: 
+  - Focused on precision, recall, and F1-score, especially for the minority class
+- **Iteration**: 
+  - Models were iteratively refined based on evaluation results for a better balance between precision and recall
+
+## Final Results and Analysis
+- **Observations**:
+  - Improved recall for the minority class
+  - Ongoing challenges with precision
+- **Trade-Offs**: 
+  - A consistent theme was balancing precision and recall, highlighting the complexity in predicting stock performance in imbalanced datasets
+
+## Key Decisions and Logic
+- **Class Imbalance Strategy**: 
+  - Focused on techniques like resampling and class weight adjustments
+- **LSTM Enhancement**: 
+  - Chosen due to the sequential nature of stock data, enhanced to capture complex patterns
+- **Threshold Tuning**: 
+  - Crucial for managing the precision-recall trade-off
+
+---
+
+*This document encapsulates the journey and decisions made in developing a robust stock prediction model, demonstrating the intricacies and challenges encountered in the field of machine learning.*
+
+
 ## Initial Model Evaluation Results
 
 The initial evaluation of the models showed challenges in predicting the minority class. Below are the precision, recall, and F1-scores for each model:
@@ -141,6 +212,8 @@ After applying class weights to the LSTM model, the performance metrics are as f
 | **Weighted Avg**  | 0.99    | 0.85   | 0.92    | 2239    |
 
 *Accuracy: 0.8530594015185351*
+
+
 
 
 Adjusting the LSTM model with class weights led to remarkable changes:
